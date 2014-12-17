@@ -9,8 +9,6 @@ auto-mode-alist (append (list '("\\.S$" . S-mode)
 
 (setq-default inferior-R-program-name "R")
 
-(setq ess-indent-level 2)
-
 ;;autocomplete
 (setq ess-use-auto-complete 'script-only)
 (define-key ac-completing-map (kbd "M-h") 'ac-quick-help)
@@ -29,3 +27,8 @@ auto-mode-alist (append (list '("\\.S$" . S-mode)
 (define-key ac-completing-map [return] nil)
 
 
+(setq ess-fancy-comments nil) ; this is for ESS
+
+(defun myindent-ess-hook ()
+  (setq ess-indent-level 2))
+(add-hook 'ess-mode-hook 'myindent-ess-hook)
