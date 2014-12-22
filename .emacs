@@ -65,7 +65,6 @@
 (require 'nlinum)     
 (global-nlinum-mode 1)
 
-;;ruby
 (load "ruby-conf")
 (load "latex-conf")
 (load "reftex-conf")

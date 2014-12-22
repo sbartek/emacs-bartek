@@ -29,9 +29,6 @@
   '(define-key inf-ruby-minor-mode-map
      (kbd "C-c C-s") 'inf-ruby-console-auto))
 
-
-
-
 (require 'rinari)
 (global-rinari-mode)
 

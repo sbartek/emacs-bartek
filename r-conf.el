@@ -32,3 +32,24 @@ auto-mode-alist (append (list '("\\.S$" . S-mode)
 (defun myindent-ess-hook ()
   (setq ess-indent-level 2))
 (add-hook 'ess-mode-hook 'myindent-ess-hook)
+
+
+;; R markdown
+;; http://johnstantongeddes.org/open%20science/2014/03/26/Rmd-polymode.html
+
+(autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t) 
+(add-to-list 'auto-mode-alist'("\.text\'" . markdown-mode)) 
+(add-to-list 'auto-mode-alist'("\.markdown\'" . markdown-mode)) 
+(add-to-list 'auto-mode-alist'("\.md\'" . markdown-mode))
+
+(setq load-path
+  (append '("~/.emacs.d/vendor/polymode/"  "~/.emacs.d/vendor/polymode/modes")
+     load-path))
+
+;;; R modes
+(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+
+(require 'poly-R) 
+(require 'poly-markdown)
