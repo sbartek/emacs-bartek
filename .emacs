@@ -71,6 +71,5 @@
 (load "javascript-conf")
 (load "octave-conf")
 (load "html-conf")
-(load "r-conf")
 (load "markdown-conf")
-
+(load "r-conf")
