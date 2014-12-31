@@ -22,9 +22,10 @@
 			       ("marmalade" . "http://marmalade-repo.org/packages/")
 			       ("melpa" . "http://melpa.milkbox.net/packages/"))
 	    )
-      (package-refresh-contents)
-      (mapcar 'download-package 
-	      (list 'rainbow-mode))
+      ;;(package-refresh-contents)
+      ;;(mapcar 'download-package (list 'rainbow-mode))
       )
 )
+
+(write-region  "(load \"~/emacs-bartek/.emacs\")\n" nil "~/.emacs" 'append)
 
