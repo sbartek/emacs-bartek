@@ -11,9 +11,19 @@
 
 (mapcar 'create-dir (list emacs-d-dir vendor-dir elpa-dir))
 
+(defun ev-download-package (package-name)
+  (if (not (require package-name nil t))
+    (package-install package-name)
+    (print (concat "Package " (symbol-name package-name) " installed."))
+    )
+)
+
 (defun download-package (package-name)
-  (when (not (require package-name nil t))
-    (package-install package-name)))
+  (if (not (require ',package-name nil t))
+    (package-install ',package-name)
+    (print (concat "Package " package-name " installed."))
+  )
+)
 
 (if (>= emacs-major-version 24)
     (progn
@@ -22,10 +32,17 @@
 			       ("marmalade" . "http://marmalade-repo.org/packages/")
 			       ("melpa" . "http://melpa.milkbox.net/packages/"))
 	    )
-      ;;(package-refresh-contents)
-      ;;(mapcar 'download-package (list 'rainbow-mode))
-      )
+      (package-refresh-contents)
+      (package-initialize)
+      (mapcar 'ev-download-package 
+              (list 'ido 'smartparens 'auto-complete 'highlight-indentation 
+                    'flyspell))))
+
+(if (file-exists-p "~/.emacs.old")
+    (delete-file "~/.emacs.old")
 )
 
-(write-region  "(load \"~/emacs-bartek/.emacs\")\n" nil "~/.emacs" 'append)
+(if (file-exists-p "~/.emacs")
+    (rename-file "~/.emacs" "~/.emacs.old"))
 
+(write-region  "(load \"~/emacs-bartek/.emacs\")\n" nil "~/.emacs" 'append)

@@ -7,7 +7,7 @@
 (let ((default-directory "~/.emacs.d/vendor/"))
   (normal-top-level-add-subdirs-to-load-path))
 
-;;(load "general-conf")
+(load "general-conf")
 ;;(load "ruby-conf")
 ;;(load "latex-conf")
 ;;(load "reftex-conf")

@@ -1,9 +1,5 @@
-(require 'ido)
-(ido-mode t)
-
 (load-theme 'tango)
-(require 'powerline)
-
+;;(require 'powerline)
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
@@ -13,6 +9,10 @@
 ;; Show file name in title bar
 ;; http://www.thetechrepo.com/main-articles/549
 (setq frame-title-format "%b - Emacs")
+
+;;
+(require 'ido)
+(ido-mode t)
 
 ;; 
 (require 'smartparens-config)
@@ -42,7 +42,7 @@
 (setq ac-ignore-case 'smart)
 
 ;;
-(require 'highlight-indentation)
+;;(require 'highlight-indentation)
 ;;
 
 (require 'flyspell)
@@ -50,11 +50,14 @@
 ;; flyspell mode breaks auto-complete mode without this.
 (ac-flyspell-workaround)
 
-;;go to line
-(global-set-key "\C-x\C-g" 'goto-line)
-
 ;;(require 'dirtree)
 ;;project-explorer looks better
 
 ;;(require 'nlinum)     
 ;;(global-nlinum-mode 1)
+
+;;Otros comandos
+
+;;go to line
+(global-set-key "\C-x\C-g" 'goto-line)
+
