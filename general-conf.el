@@ -1,5 +1,11 @@
 (load-theme 'tango)
-;;(require 'powerline)
+(custom-set-faces
+ '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 98 :width normal)))))
+
+
+(require 'cl)
+(require 'powerline)
+
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
@@ -9,6 +15,9 @@
 ;; Show file name in title bar
 ;; http://www.thetechrepo.com/main-articles/549
 (setq frame-title-format "%b - Emacs")
+
+
+
 
 ;;
 (require 'ido)

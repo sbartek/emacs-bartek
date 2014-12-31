@@ -2,7 +2,7 @@
 
 (defvar emacs-d-dir "~/.emacs.d")
 (defvar vendor-dir "~/.emacs.d/vendor")
-(defvar elpa-dir "~/.emacs.d/elpa/")
+(defvar elpa-dir "~/.emacs.d/elpa")
 
 (defun create-dir (name-dir)
   (if (file-exists-p name-dir)
@@ -37,6 +37,14 @@
       (mapcar 'ev-download-package 
               (list 'ido 'smartparens 'auto-complete 'highlight-indentation 
                     'flyspell))))
+
+(shell-command 
+ (concat "git clone https://github.com/jonathanchu/emacs-powerline " 
+         vendor-dir "/emacs-powerline")
+)
+
+
+
 
 (if (file-exists-p "~/.emacs.old")
     (delete-file "~/.emacs.old")
