@@ -59,11 +59,14 @@
 ;; flyspell mode breaks auto-complete mode without this.
 (ac-flyspell-workaround)
 
+;;go to line
+(global-set-key "\C-x\C-g" 'goto-line)
+
 ;;(require 'dirtree)
 ;;project-explorer looks better
 
-(require 'nlinum)     
-(global-nlinum-mode 1)
+;;(require 'nlinum)     
+;;(global-nlinum-mode 1)
 
 (load "ruby-conf")
 (load "latex-conf")
@@ -73,3 +76,7 @@
 (load "html-conf")
 (load "markdown-conf")
 (load "r-conf")
+(load "org-conf")
+
+
+
