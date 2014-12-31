@@ -7,4 +7,4 @@
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 
 (setq TeX-PDF-mode t)
-;;(setq TeX-source-correlate-mode t)
+(setq TeX-source-correlate-mode t)

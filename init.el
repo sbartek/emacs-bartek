@@ -36,15 +36,12 @@
       (package-initialize)
       (mapcar 'ev-download-package 
               (list 'ido 'smartparens 'auto-complete 'highlight-indentation 
-                    'flyspell))))
+                    'flyspell 'auctex))))
 
 (shell-command 
  (concat "git clone https://github.com/jonathanchu/emacs-powerline " 
          vendor-dir "/emacs-powerline")
 )
-
-
-
 
 (if (file-exists-p "~/.emacs.old")
     (delete-file "~/.emacs.old")

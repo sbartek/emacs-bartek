@@ -9,7 +9,7 @@
 
 (load "general-conf")
 ;;(load "ruby-conf")
-;;(load "latex-conf")
+(load "latex-conf")
 ;;(load "reftex-conf")
 ;;(load "javascript-conf")
 ;;(load "octave-conf")
