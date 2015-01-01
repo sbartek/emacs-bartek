@@ -1,7 +1,23 @@
-(load-theme 'tango)
-(custom-set-faces
- '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 98 :width normal)))))
+;;mac o linux
+(defun system-is-mac ()
+  (interactive)
+  (string-equal system-type "darwin"))
 
+(defun system-is-linux ()
+  (interactive)
+  (string-equal system-type "gnu/linux"))
+
+
+;;start server
+(load "server")
+(unless (server-running-p) (server-start))
+
+;;full screen
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
+(load-theme 'tango)
+(set-face-attribute 'default nil :height 100)
 
 (require 'cl)
 (require 'powerline)
@@ -16,9 +32,6 @@
 ;; http://www.thetechrepo.com/main-articles/549
 (setq frame-title-format "%b - Emacs")
 
-
-
-
 ;;
 (require 'ido)
 (ido-mode t)
@@ -29,12 +42,17 @@
 (show-smartparens-global-mode t)
 
 ;;
+(require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
+(global-auto-complete-mode t)
 
-(set-face-attribute 'ac-candidate-face nil   :background "#00222c" :foreground "light gray")
-(set-face-attribute 'ac-selection-face nil   :background "SteelBlue4" :foreground "white")
-(set-face-attribute 'popup-tip-face    nil   :background "#003A4E" :foreground "light gray")
+(set-face-attribute 'ac-candidate-face nil   
+                    :background "#00222c" :foreground "light gray")
+(set-face-attribute 'ac-selection-face nil   
+                    :background "SteelBlue4" :foreground "white")
+(set-face-attribute 'popup-tip-face    nil   
+                    :background "#003A4E" :foreground "light gray")
 
 (setq 
       ;; ac-auto-show-menu 1
@@ -50,8 +68,13 @@
 ;;(setq ac-ignore-case nil)
 (setq ac-ignore-case 'smart)
 
+(require 'fill-column-indicator)
+(define-globalized-minor-mode
+ global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode t)
+
 ;;
-;;(require 'highlight-indentation)
+(require 'highlight-indentation)
 ;;
 
 (require 'flyspell)

@@ -35,8 +35,12 @@
       (package-refresh-contents)
       (package-initialize)
       (mapcar 'ev-download-package 
-              (list 'ido 'smartparens 'auto-complete 'highlight-indentation 
-                    'flyspell 'auctex))))
+              (list 'ido 'smartparens 'auto-complete 
+                    'fill-column-indicator 'highlight-indentation 
+                    'flyspell 
+                    ;;'auctex
+                    'virtualenvwrapper
+                    ))))
 
 (shell-command 
  (concat "git clone https://github.com/jonathanchu/emacs-powerline " 

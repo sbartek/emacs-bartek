@@ -8,15 +8,12 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 (load "general-conf")
-;;(load "ruby-conf")
 (load "latex-conf")
-;;(load "reftex-conf")
+(load "python-conf")
+;;(load "ruby-conf")
 ;;(load "javascript-conf")
 ;;(load "octave-conf")
 ;;(load "html-conf")
 ;;(load "markdown-conf")
 ;;(load "r-conf")
 ;;(load "org-conf")
-
-
-

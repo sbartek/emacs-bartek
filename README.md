@@ -1,10 +1,13 @@
 My emacs config
 ===============
 
-clone it into `~` and add
+clone it into `~` and add run
+      /usr/bin/emacs --script emacs-bartek/init.el
 
-    (load "~/emacs-bartek/.emacs")
-    
+
+At the moment hay que manually install auctex
+
+Old:    
 Clone `markdown-mode` and `polymode` from github repositories into
 `.emacs.d/vendor/`
 
