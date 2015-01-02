@@ -1,18 +1,12 @@
 (add-to-list 'ac-modes 'enh-ruby-mode)
-(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
+(autoload 'enh-ruby-mode "enh-ruby-mode" 
+  "Major mode for ruby files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
 
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 
-
-
-(global-ede-mode 1)
-(require 'semantic/sb)
-(semantic-mode 1)
-
-(setq-default indent-tabs-mode nil)
 
 ;;rvm
 ;; (eval-when-compile (require 'cl))
@@ -36,8 +30,10 @@
 (require 'smartparens-ruby)
 
 ;;
-(add-hook 'enh-ruby-mode-hook
-          (lambda () (highlight-indentation-current-column-mode)))
+(add-hook 'enh-ruby-mode-hook 'highlight-indentation-mode) 
+
+(add-hook 'enh-ruby-mode-hook 
+          'highlight-indentation-current-column-mode)
 
 (add-hook 'enh-ruby-mode-hook
           (lambda () (flyspell-prog-mode)))

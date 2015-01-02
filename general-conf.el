@@ -75,12 +75,17 @@
 
 ;;
 (require 'highlight-indentation)
+(set-face-background 'highlight-indentation-face "#e3e3d3")
+(set-face-background 'highlight-indentation-current-column-face "#c9b9b9")
+
 ;;
 
 (require 'flyspell)
 (setq flyspell-issue-message-flg nil)
 ;; flyspell mode breaks auto-complete mode without this.
 (ac-flyspell-workaround)
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;;(require 'dirtree)
 ;;project-explorer looks better
@@ -93,3 +98,10 @@
 ;;go to line
 (global-set-key "\C-x\C-g" 'goto-line)
 
+
+;;No se que:
+;;(global-ede-mode 1)
+;;(require 'semantic/sb)
+;;(semantic-mode 1)
+
+;;(setq-default indent-tabs-mode nil)

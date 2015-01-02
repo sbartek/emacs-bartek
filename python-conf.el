@@ -1,11 +1,13 @@
+;;;  Python configuration:
+
 (require 'python)
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells) ;; if you want interactive shell support
 (venv-initialize-eshell) ;; if you want eshell support
 (setq venv-location "~/venvs")
 
-;;indent:if can't guess set it to 2:
-(setq python-indent-offset 2)
+;;indent:if can't guess set it to 4:
+(setq python-indent-offset 4)
 
 ;;from https://github.com/jhamrick/emacs
 (setq
@@ -23,3 +25,37 @@
  python-shell-completion-string-code
    "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
+(add-hook 'python-mode-hook 'highlight-indentation-mode) 
+(add-hook 'python-mode-hook
+          'highlight-indentation-current-column-mode)
+
+
+;; pyflakes flymake integration
+;; http://stackoverflow.com/a/1257306/347942
+;; (when (load "flymake" t)
+;;   (defun flymake-pyflakes-init ()
+;;     (let* ((temp-file (flymake-init-create-temp-buffer-copy
+;;                        'flymake-create-temp-inplace))
+;;            (local-file (file-relative-name
+;;                         temp-file
+;;                         (file-name-directory buffer-file-name))))
+;;       (list "pycheckers" (list local-file))))
+;;   (add-to-list 'flymake-allowed-file-name-masks
+;;                '("\\.py\\'" flymake-pyflakes-init)))
+;; (add-hook 'python-mode-hook
+;; 	  (lambda ()
+;; 	    (unless (eq buffer-file-name nil) (flymake-mode 1))))
+
+
+(when (load "flymake" t) 
+  (defun flymake-pyflakes-init () 
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy 
+                       'flymake-create-temp-inplace)) 
+           (local-file (file-relative-name 
+                        temp-file 
+                        (file-name-directory buffer-file-name)))) 
+      (list "pyflakes" (list local-file)))) 
+  (add-to-list 'flymake-allowed-file-name-masks 
+               '("\\.py\\'" flymake-pyflakes-init)))
+
+(add-hook 'python-mode-hook 'flymake-mode)

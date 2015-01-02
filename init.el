@@ -37,9 +37,14 @@
       (mapcar 'ev-download-package 
               (list 'ido 'smartparens 'auto-complete 
                     'fill-column-indicator 'highlight-indentation 
-                    'flyspell 
+                    'flyspell 'flycheck
+                    ;;LaTeX
                     ;;'auctex
+                    ;;Python
                     'virtualenvwrapper
+                    ;;Ruby
+                    'enh-ruby-mode
+                    'rvm 'rinari 'rspec-mode
                     ))))
 
 (shell-command 

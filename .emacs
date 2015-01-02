@@ -10,7 +10,7 @@
 (load "general-conf")
 (load "latex-conf")
 (load "python-conf")
-;;(load "ruby-conf")
+(load "ruby-conf")
 ;;(load "javascript-conf")
 ;;(load "octave-conf")
 ;;(load "html-conf")
