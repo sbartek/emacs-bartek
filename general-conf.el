@@ -87,6 +87,12 @@
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+;;http://www.emacswiki.org/emacs/FlymakeRuby
+(require 'flymake)
+
+(set-face-background 'flymake-errline "red4")
+(set-face-background 'flymake-warnline "dark slate blue")
+
 ;;(require 'dirtree)
 ;;project-explorer looks better
 

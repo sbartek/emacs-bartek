@@ -11,9 +11,11 @@
 (load "latex-conf")
 (load "python-conf")
 (load "ruby-conf")
-;;(load "javascript-conf")
-;;(load "octave-conf")
-;;(load "html-conf")
-;;(load "markdown-conf")
-;;(load "r-conf")
-;;(load "org-conf")
+(load "javascript-conf")
+(load "octave-conf")
+(load "html-conf")
+(load "markdown-conf")
+(load "r-conf")
+(load "org-conf")
+
+

@@ -37,7 +37,7 @@
       (mapcar 'ev-download-package 
               (list 'ido 'smartparens 'auto-complete 
                     'fill-column-indicator 'highlight-indentation 
-                    'flyspell 'flycheck
+                    'flyspell 'flycheck 'flymake
                     ;;LaTeX
                     ;;'auctex
                     ;;Python
@@ -45,11 +45,25 @@
                     ;;Ruby
                     'enh-ruby-mode
                     'rvm 'rinari 'rspec-mode
+                    ;;javascript
+                    'js2-mode
+                    ;;
+                    'ess
                     ))))
 
 (shell-command 
  (concat "git clone https://github.com/jonathanchu/emacs-powerline " 
          vendor-dir "/emacs-powerline")
+)
+
+(shell-command 
+ (concat "git clone git://jblevins.org/git/markdown-mode.git " 
+         vendor-dir "/markdown-mode")
+)
+
+(shell-command 
+ (concat "git clone https://github.com/vitoshka/polymode.git " 
+         vendor-dir "/polymode")
 )
 
 (if (file-exists-p "~/.emacs.old")
@@ -60,3 +74,6 @@
     (rename-file "~/.emacs" "~/.emacs.old"))
 
 (write-region  "(load \"~/emacs-bartek/.emacs\")\n" nil "~/.emacs" 'append)
+
+
+;;(package-install 'auctex)
