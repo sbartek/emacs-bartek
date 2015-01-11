@@ -38,6 +38,7 @@
               (list 'ido 'smartparens 'auto-complete 
                     'fill-column-indicator 'highlight-indentation 
                     'flyspell 'flycheck 'flymake
+                    'projectile
                     ;;LaTeX
                     ;;'auctex
                     ;;Python

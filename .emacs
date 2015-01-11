@@ -8,7 +8,6 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-
 (let ((default-directory "~/.emacs.d/elpa/"))
   (normal-top-level-add-subdirs-to-load-path))
 (let ((default-directory "~/.emacs.d/vendor/"))
@@ -29,14 +28,13 @@
 (load "markdown-conf")
 
 (if (system-is-linux)
-    (
-     (load "general-linux-conf")
-     (load "python-linux-conf")
-     (load "latex-conf")
-     (load "ruby-conf")
-     (load "javascript-conf")
-     (load "octave-conf")
-     (load "html-conf")
-     (load "r-conf")
-     )
+    (progn
+      (load "general-linux-conf")
+      (load "python-linux-conf")
+      (load "latex-conf")
+      (load "ruby-conf")
+      (load "javascript-conf")
+      (load "octave-conf")
+      (load "html-conf")
+      (load "r-conf"))
   )

@@ -23,10 +23,6 @@
 ;;(setq ac-ignore-case nil)
 (setq ac-ignore-case 'smart)
 
-(require 'fill-column-indicator)
-(define-globalized-minor-mode
- global-fci-mode fci-mode (lambda () (fci-mode 1)))
-(global-fci-mode t)
 
 ;;
 (require 'highlight-indentation)
