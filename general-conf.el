@@ -2,12 +2,15 @@
 (load "server")
 (unless (server-running-p) (server-start))
 
+(require 'powerline)
+(powerline-default-theme)
+
 ;;full screen
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-(load-theme 'tango)
-(set-face-attribute 'default nil :height 100)
+;;(load-theme 'tango)
+;;(set-face-attribute 'default nil :height 100)
 
 (setq
    backup-by-copying t      ; don't clobber symlinks
@@ -25,9 +28,9 @@
 
 
 (require 'cl)
-(require 'powerline)
 
-(setq-default tab-width 2)
+
+(setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 
 (setq inhibit-splash-screen t)

@@ -1,4 +1,0 @@
-* Emacs on mac
-** Instaling
-brew install emacs --use-git-head --cocoa --srgb
-** Package Manager
