@@ -3,6 +3,8 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize "~/emacs-bartek")
 
+(require 'pallet)
+
 ;;  ;;mac o linux
 (defun system-is-mac ()
   (interactive)
@@ -23,11 +25,9 @@
 (load "latex-conf")
 (load "ruby-conf")
 
+(if (system-is-linux)
+    (load "general-linux-conf"))
 
-;; (if (system-is-linux)
-;;     (progn
-;;       (load "general-linux-conf")
-;;       (load "python-linux-conf")
-;;       
-;;       )
-;;   )
+(if (system-is-linux)
+    (load "python-linux-conf"))
+

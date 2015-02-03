@@ -1,8 +1,12 @@
 My emacs config
 ===============
 
-clone it into `~` and add run
-      /usr/bin/emacs --script emacs-bartek/setup.el
+Install cask
+http://cask.readthedocs.org/en/latest/guide/installation.html#manual-installation
+
+Clone it into `~` and add run
+    cask install
+Add to .emacs:
+    (load "~/emacs-bartek/.emacs")
 
 
-At the moment hay que manually install auctex
