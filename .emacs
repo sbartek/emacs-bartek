@@ -26,6 +26,10 @@
 (load "org-conf")
 (load "python-conf")
 (load "markdown-conf")
+(load "javascript-conf")
+(load "html-conf")
+(load "r-conf")
+
 
 (if (system-is-linux)
     (progn
@@ -33,8 +37,6 @@
       (load "python-linux-conf")
       (load "latex-conf")
       (load "ruby-conf")
-      (load "javascript-conf")
       (load "octave-conf")
-      (load "html-conf")
-      (load "r-conf"))
+      )
   )

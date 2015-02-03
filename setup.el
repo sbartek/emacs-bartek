@@ -50,6 +50,8 @@
                     'js2-mode
                     ;;
                     'ess
+                    ;;cucumber
+                    'feature-mode
                     ))))
 
 (shell-command 

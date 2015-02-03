@@ -29,9 +29,8 @@
 (add-hook 'python-mode-hook
           'highlight-indentation-current-column-mode)
 
-
-;; pyflakes flymake integration
-;; http://stackoverflow.com/a/1257306/347942
+;; ;;pyflakes flymake integration
+;; ;;http://stackoverflow.com/a/1257306/347942
 ;; (when (load "flymake" t)
 ;;   (defun flymake-pyflakes-init ()
 ;;     (let* ((temp-file (flymake-init-create-temp-buffer-copy
@@ -47,4 +46,8 @@
 ;; 	    (unless (eq buffer-file-name nil) (flymake-mode 1))))
 
 
-;;(require 'python-django)
+;; ;;(require 'python-django)
+
+;; (add-to-list
+;;     `flymake-err-line-patterns
+;;     '("Runaway argument?" nil nil nil))

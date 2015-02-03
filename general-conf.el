@@ -9,6 +9,21 @@
 (load-theme 'tango)
 (set-face-attribute 'default nil :height 100)
 
+(setq
+   backup-by-copying t      ; don't clobber symlinks
+   backup-directory-alist
+    '(("." . "~/.emacs-saves"))    ; don't litter my fs tree
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)   
+
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+
 (require 'cl)
 (require 'powerline)
 
@@ -39,8 +54,12 @@
 (global-auto-complete-mode t)
 
 
-;; ;;
+;; 
+;; (if (system-is-mac)
+;;     (setq exec-path (append "/usr/local/Cellar/aspell/0.60.6.1/bin/" exec-path)))
+;; (setq ispell-program-name "aspell")
 
+;;
 (require 'flyspell)
 (setq flyspell-issue-message-flg nil)
 ;; ;; flyspell mode breaks auto-complete mode without this.
@@ -62,3 +81,6 @@
 (define-globalized-minor-mode
  global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode t)
+
+(show-smartparens-global-mode t)
+

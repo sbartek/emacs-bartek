@@ -1,6 +1,4 @@
 
-(show-smartparens-global-mode t)
-
 
 (set-face-attribute 'ac-candidate-face nil   
                     :background "#00222c" :foreground "light gray")
