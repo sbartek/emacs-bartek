@@ -57,10 +57,6 @@
 (global-auto-complete-mode t)
 
 
-;; 
-;; (if (system-is-mac)
-;;     (setq exec-path (append "/usr/local/Cellar/aspell/0.60.6.1/bin/" exec-path)))
-;; (setq ispell-program-name "aspell")
 
 ;;
 (require 'flyspell)
@@ -86,4 +82,7 @@
 (global-fci-mode t)
 
 (show-smartparens-global-mode t)
+
+(if (system-is-mac)
+    (load "general-mac-conf"))
 
