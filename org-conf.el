@@ -17,9 +17,7 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 
-(setq org-agenda-files (list "~/Dropbox/org/work.org"
-                            "~/Dropbox/org/home.org"
-                            ))
+(setq org-agenda-files '("~/Dropbox/org"))
 
 
 (setq org-log-done 'time)

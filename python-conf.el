@@ -3,7 +3,7 @@
 (require 'python)
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells) ;; if you want interactive shell support
-(venv-initialize-eshell) ;; if you want eshell support
+;;(venv-initialize-eshell) ;; if you want eshell support
 (setq venv-location "~/venvs")
 
 ;;indent:if can't guess set it to 4:
