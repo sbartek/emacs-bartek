@@ -4,6 +4,15 @@
 (source org)
 (source SC)
 
+(depends-on "pallet" :git "https://github.com/rdallasgray/pallet" :ref "master")
+(depends-on "smart-mode-line-powerline-theme")
+(depends-on "powerline" :git "https://github.com/milkypostman/powerline" :ref "master")
+
+(depends-on "color-theme-heroku")
+(depends-on "heroku-theme")
+(depends-on "highlight-current-line")
+(depends-on "smart-mode-line")
+
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "dash")
@@ -18,7 +27,6 @@
 (depends-on "magit")
 (depends-on "multiple-cursors")
 (depends-on "nyan-mode")
-(depends-on "pallet")
 (depends-on "popwin")
 (depends-on "prodigy")
 (depends-on "projectile")
@@ -29,10 +37,6 @@
 (depends-on "web-mode")
 (depends-on "yasnippet")
 
-(depends-on "powerline")
-(depends-on "color-theme-heroku")
-(depends-on "heroku-theme")
-(depends-on "highlight-current-line")
 
 (depends-on "ido") 
 (depends-on "smartparens") 

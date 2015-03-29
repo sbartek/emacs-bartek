@@ -2,10 +2,22 @@
 (load "server")
 (unless (server-running-p) (server-start))
 
-(require 'powerline)
-(powerline-default-theme)
-;;(load-theme 'wombat)
+
+(setq sml/no-confirm-load-theme t)
+
+(sml/setup)
+(sml/apply-theme 'powerline)
+
+;;(require 'powerline)
+;;(powerline-default-theme)
+
+;;(require 'powerline)
+
 (load-theme 'heroku t)
+
+(require 'smart-mode-line)
+;;(sml/setup)
+;;(sml/apply-theme 'automatic)
 
 ; highlight the current line
 (require 'highlight-current-line)
@@ -25,8 +37,7 @@
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-;;(load-theme 'tango)
-;;(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 100)
 
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
  (windmove-default-keybindings)
@@ -43,10 +54,10 @@
    kept-old-versions 2
    version-control t)   
 
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
+;; (setq backup-directory-alist
+;;       `((".*" . ,temporary-file-directory)))
+;; (setq auto-save-file-name-transforms
+;;       `((".*" ,temporary-file-directory t)))
 
 
 (require 'cl)
@@ -62,38 +73,27 @@
 ;; http://www.thetechrepo.com/main-articles/549
 (setq frame-title-format "%b - Emacs")
 
-;;
 (require 'ido)
 (ido-mode t)
 
-;; 
 (require 'smartparens-config)
 (smartparens-global-mode)
 
-
-;;
 (require 'auto-complete)
 (require 'auto-complete-config)
 (setq ac-dictionary-files (list (concat user-emacs-directory ".dict")))
 (ac-config-default)
 (global-auto-complete-mode t)
 
-
-
-;;
 (require 'flyspell)
 (setq flyspell-issue-message-flg nil)
-;; ;; flyspell mode breaks auto-complete mode without this.
+;; flyspell mode breaks auto-complete mode without this.
 (ac-flyspell-workaround)
 
 ;; !!!!! (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; ;;http://www.emacswiki.org/emacs/FlymakeRuby
 (require 'flymake)
-
-;;(set-face-background 'flymake-errline "red4")
-;;(set-face-background 'flymake-warnline "dark slate blue")
-
 
 (require 'projectile)
 (projectile-global-mode)
