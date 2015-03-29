@@ -54,6 +54,4 @@
 (depends-on "auctex")
 (depends-on "org")
 
-(depends-on "octave-mod")
-
-
+(depends-on "yaml-mode")
