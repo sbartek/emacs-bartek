@@ -30,6 +30,7 @@
 (depends-on "yasnippet")
 
 (depends-on "powerline")
+
 (depends-on "ido") 
 (depends-on "smartparens") 
 (depends-on "auto-complete") 

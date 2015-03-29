@@ -4,6 +4,8 @@
 
 (require 'powerline)
 (powerline-default-theme)
+(load-theme 'wombat)
+
 
 ;;full screen
 (custom-set-variables
