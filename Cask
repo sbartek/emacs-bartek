@@ -30,6 +30,9 @@
 (depends-on "yasnippet")
 
 (depends-on "powerline")
+(depends-on "color-theme-heroku")
+(depends-on "heroku-theme")
+(depends-on "highlight-current-line")
 
 (depends-on "ido") 
 (depends-on "smartparens") 

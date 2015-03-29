@@ -4,8 +4,22 @@
 
 (require 'powerline)
 (powerline-default-theme)
-(load-theme 'wombat)
+;;(load-theme 'wombat)
+(load-theme 'heroku t)
 
+; highlight the current line
+(require 'highlight-current-line)
+(global-hl-line-mode t)
+(setq highlight-current-line-globally t)
+(setq highlight-current-line-high-faces nil)
+(setq highlight-current-line-whole-line nil)
+(setq hl-line-face (quote highlight))
+
+; display line numbers to the right of the window
+(global-linum-mode t)
+; show the current line and column numbers in the stats bar as well
+(line-number-mode t)
+(column-number-mode t)
 
 ;;full screen
 (custom-set-variables
@@ -13,6 +27,12 @@
 
 ;;(load-theme 'tango)
 ;;(set-face-attribute 'default nil :height 100)
+
+;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
+ (windmove-default-keybindings)
+
+ ;; Enable copy and pasting from clipboard
+ (setq x-select-enable-clipboard t)
 
 (setq
    backup-by-copying t      ; don't clobber symlinks
