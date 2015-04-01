@@ -63,3 +63,5 @@
 (depends-on "org")
 
 (depends-on "yaml-mode")
+
+(depends-on "python-mode")

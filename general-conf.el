@@ -2,13 +2,16 @@
 (load "server")
 (unless (server-running-p) (server-start))
 
+(require 'powerline)
 
 (setq sml/no-confirm-load-theme t)
+
 
 (sml/setup)
 (sml/apply-theme 'powerline)
 
-;;(require 'powerline)
+
+;;
 ;;(powerline-default-theme)
 
 ;;(require 'powerline)
@@ -37,7 +40,7 @@
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 120)
 
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
  (windmove-default-keybindings)
