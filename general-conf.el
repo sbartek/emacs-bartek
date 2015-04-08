@@ -81,6 +81,7 @@
 
 (require 'smartparens-config)
 (smartparens-global-mode)
+(show-smartparens-global-mode t)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
@@ -106,7 +107,7 @@
  global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode t)
 
-(show-smartparens-global-mode t)
+
 
 (if (system-is-mac)
     (load "general-mac-conf"))
