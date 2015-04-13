@@ -54,6 +54,9 @@
 (depends-on "web-mode")
 (depends-on "htmlize")
 (depends-on "rainbow-mode")
+(depends-on "emmet-mode")
+(depends-on "ac-emmet")
+
 
 (depends-on "python-mode")
 (depends-on "virtualenvwrapper")
