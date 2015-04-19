@@ -8,6 +8,7 @@
    (R . t)
    (octave . t)
    (ruby . t)
+   (latex . t)
    )
 )
 
