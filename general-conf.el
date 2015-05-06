@@ -94,6 +94,9 @@
 ;; flyspell mode breaks auto-complete mode without this.
 (ac-flyspell-workaround)
 
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+
 ;; !!!!! (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; ;;http://www.emacswiki.org/emacs/FlymakeRuby

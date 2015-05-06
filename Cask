@@ -68,6 +68,8 @@
 
 
 (depends-on "js2-mode")
+(depends-on "coffee-mode")
+
 
 (depends-on "ess")
 (depends-on "polymode")
