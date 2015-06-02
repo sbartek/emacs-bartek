@@ -29,6 +29,4 @@
 (if (system-is-linux)
     (load "general-linux-conf"))
 
-(if (system-is-linux)
-    (load "python-linux-conf"))
 
