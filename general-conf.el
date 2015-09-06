@@ -6,10 +6,8 @@
 
 (setq sml/no-confirm-load-theme t)
 
-
 (sml/setup)
 (sml/apply-theme 'powerline)
-
 
 ;;
 ;;(powerline-default-theme)
@@ -40,7 +38,7 @@
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'default nil :height 100)
 
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
  (windmove-default-keybindings)
@@ -62,9 +60,7 @@
 ;; (setq auto-save-file-name-transforms
 ;;       `((".*" ,temporary-file-directory t)))
 
-
 (require 'cl)
-
 
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
@@ -109,8 +105,6 @@
 (define-globalized-minor-mode
  global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode t)
-
-
 
 (if (system-is-mac)
     (load "general-mac-conf"))

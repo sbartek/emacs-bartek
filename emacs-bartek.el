@@ -3,10 +3,12 @@
 
 (add-to-list 'load-path "~/emacs-bartek/")
 
-
 (require 'pallet)
 
-;;  ;;mac o linux
+;;
+;;mac o linux
+;;
+
 (defun system-is-mac ()
   (interactive)
   (string-equal system-type "darwin"))
