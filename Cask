@@ -74,3 +74,4 @@
 (depends-on "ess")
 (depends-on "polymode")
 
+(depends-on "ensime")
