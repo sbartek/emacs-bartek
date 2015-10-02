@@ -1,6 +1,5 @@
 (source gnu)
 (source melpa)
-(source marmalade)
 (source org)
 (source SC)
 
@@ -8,7 +7,6 @@
 (depends-on "smart-mode-line-powerline-theme")
 (depends-on "powerline" :git "https://github.com/milkypostman/powerline" :ref "master")
 
-(depends-on "color-theme-heroku")
 (depends-on "heroku-theme")
 (depends-on "highlight-current-line")
 (depends-on "smart-mode-line")

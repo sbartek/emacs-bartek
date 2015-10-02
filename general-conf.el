@@ -14,7 +14,8 @@
 
 ;;(require 'powerline)
 
-(load-theme 'heroku t)
+(if (display-graphic-p)
+    (load-theme 'heroku t))
 
 (require 'smart-mode-line)
 ;;(sml/setup)
