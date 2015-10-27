@@ -70,6 +70,7 @@
 
 
 (depends-on "ess")
+(depends-on "ess-smart-equals")
 (depends-on "polymode")
 
 (depends-on "ensime")

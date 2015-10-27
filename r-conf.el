@@ -61,3 +61,7 @@ auto-mode-alist (append (list '("\\.S$" . S-mode)
 (setq ess-nuke-trailing-whitespace-p nil) 
 
 (add-to-list 'auto-mode-alist '("\\.Rmd" . rmd-mode))
+
+;;
+(add-hook 'ess-mode-hook 'ess-smart-equals-mode)
+(add-hook 'inferior-ess-mode-hook 'ess-smart-equals-mode)
