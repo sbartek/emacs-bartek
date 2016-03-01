@@ -74,3 +74,5 @@
 (depends-on "polymode")
 
 (depends-on "ensime")
+
+(depends-on "csv-mode")
