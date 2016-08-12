@@ -78,3 +78,4 @@
 
 
 (depends-on "auto-complete-c-headers")
+(depends-on "csv-mode")
