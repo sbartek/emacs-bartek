@@ -110,3 +110,7 @@
 (if (system-is-mac)
     (load "general-mac-conf"))
 
+
+;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)

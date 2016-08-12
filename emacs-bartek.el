@@ -27,6 +27,7 @@
 (load "octave-conf")
 (load "latex-conf")
 (load "ruby-conf")
+(load "c-conf")
 
 (if (system-is-linux)
     (load "general-linux-conf"))

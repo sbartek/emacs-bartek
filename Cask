@@ -3,6 +3,7 @@
 (source org)
 (source SC)
 
+(depends-on "graphene" "20141030.219")
 (depends-on "pallet" :git "https://github.com/rdallasgray/pallet" :ref "master")
 (depends-on "smart-mode-line-powerline-theme")
 (depends-on "powerline" :git "https://github.com/milkypostman/powerline" :ref "master")
@@ -74,3 +75,6 @@
 (depends-on "polymode")
 
 (depends-on "ensime")
+
+
+(depends-on "auto-complete-c-headers")
