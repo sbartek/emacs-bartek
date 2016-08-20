@@ -40,9 +40,10 @@
 (depends-on "fill-column-indicator") 
 (depends-on "highlight-indentation") 
 (depends-on "flyspell") 
-(depends-on "flymake") 
+(depends-on "flymake")
+(depends-on "flymake-cursor")
 (depends-on "projectile")
-
+(depends-on "iedit")
 
 (depends-on "markdown-mode")
 (depends-on "auctex")
@@ -79,3 +80,7 @@
 
 (depends-on "auto-complete-c-headers")
 (depends-on "csv-mode")
+
+
+(depends-on "flymake-google-cpplint")
+(depends-on "google-c-style")

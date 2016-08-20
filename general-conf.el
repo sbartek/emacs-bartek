@@ -114,3 +114,8 @@
 ;; yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
+
+
+;; iedit
+; ???Fix iedit bug in Mac
+(define-key global-map (kbd "C-c ;") 'iedit-mode)
