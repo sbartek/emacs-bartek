@@ -60,6 +60,7 @@
 
 (depends-on "python-mode")
 (depends-on "virtualenvwrapper")
+(depends-on "ein")
 
 (depends-on "enh-ruby-mode")
 (depends-on "rvm")
