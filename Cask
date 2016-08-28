@@ -59,6 +59,7 @@
 
 
 (depends-on "python-mode")
+(depends-on "jedi")
 (depends-on "virtualenvwrapper")
 (depends-on "ein")
 
@@ -85,3 +86,6 @@
 
 (depends-on "flymake-google-cpplint")
 (depends-on "google-c-style")
+
+;;Fun
+(depends-on "xkcd")
