@@ -89,3 +89,6 @@
 
 ;;Fun
 (depends-on "xkcd")
+
+;;java
+(depends-on "gradle-mode")

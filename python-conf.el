@@ -1,5 +1,8 @@
 ;;;  Python configuration:
 
+;;; you can install Pylint for Python
+;;; pip install pylint
+
 ;;indent:if can't guess set it to 4:
 (setq python-indent-offset 4)
 
@@ -8,8 +11,8 @@
 ; virtualenv
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells) ;; if you want interactive shell support
-(setq venv-location "~/venvs")
-(venv-workon "py3.5")
+(setq venv-location "~/virtualEnvs")
+(venv-workon "py35")
 
 ; use IPython
 (setq-default py-shell-name "ipython")

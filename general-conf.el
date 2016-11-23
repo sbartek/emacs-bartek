@@ -39,7 +39,8 @@
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-(set-face-attribute 'default nil :height 100)
+;;font size
+(set-face-attribute 'default nil :height 130)
 
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
  (windmove-default-keybindings)
@@ -94,10 +95,11 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
-;; !!!!! (add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 
 ;; ;;http://www.emacswiki.org/emacs/FlymakeRuby
-(require 'flymake)
+;; (require 'flymake)
 
 (require 'projectile)
 (projectile-global-mode)
