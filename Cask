@@ -3,11 +3,11 @@
 (source org)
 (source SC)
 
-(depends-on "graphene" "20141030.219")
-(depends-on "pallet" :git "https://github.com/rdallasgray/pallet" :ref "master")
-(depends-on "smart-mode-line-powerline-theme")
-(depends-on "powerline" :git "https://github.com/milkypostman/powerline" :ref "master")
 
+(depends-on "graphene")
+(depends-on "pallet")
+(depends-on "smart-mode-line-powerline-theme")
+(depends-on "powerline")
 (depends-on "heroku-theme")
 (depends-on "highlight-current-line")
 (depends-on "smart-mode-line")

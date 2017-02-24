@@ -4,7 +4,7 @@ My emacs config
 Install cask
 http://cask.readthedocs.org/en/latest/guide/installation.html#manual-installation
 
-Clone it into `~` and add run
+Clone it into `~`, enter `cd emacs-bartek` run
 
     cask install
 
@@ -15,8 +15,8 @@ Add to .emacs:
 
 ## Python 
 
-I assume that one uses python's `virtualenv` and has`~\venvs` catalog
-with `py3.5` environment. If not, one should edit `python-config.el`
+I assume that one uses python's `virtualenv` and has`~\Envs` catalog
+with `py3.6` environment. If not, one should edit `python-config.el`
 file accordingly.`
 
 Also, after installing everything run in Emacs: `M-x jedi:install-server`
