@@ -11,8 +11,8 @@
 ; virtualenv
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells) ;; if you want interactive shell support
-(setq venv-location "~/virtualEnvs")
-(venv-workon "py35")
+(setq venv-location "~/Envs")
+(venv-workon "py3.6")
 
 ; use IPython
 (setq-default py-shell-name "ipython")
