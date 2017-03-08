@@ -121,3 +121,11 @@
 ;; iedit
 ; ???Fix iedit bug in Mac
 (define-key global-map (kbd "C-c ;") 'iedit-mode)
+
+
+;;
+;; turn on abbrev mode globally
+(setq abbrev-file-name "~/emacs-bartek/abbrev_defs.el")
+
+
+

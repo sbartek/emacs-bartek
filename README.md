@@ -21,9 +21,14 @@ file accordingly.`
 
 Also, after installing everything run in Emacs: `M-x jedi:install-server`
 
+You can also install Pylint for Python by, for example, 
+`pip install pylint``
+
+
 ## C/C++ Support
 
-For flymake, you should have installed `cpplint`. One way to get it is to so something like:
+For flymake, you should have installed `cpplint`. 
+One way to get it is to so something like:
 
 ```
 pip install cpplint

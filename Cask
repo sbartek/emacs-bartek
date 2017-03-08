@@ -59,6 +59,7 @@
 
 
 (depends-on "python-mode")
+(depends-on "anaconda-mode")
 (depends-on "jedi")
 (depends-on "virtualenvwrapper")
 (depends-on "ein")
