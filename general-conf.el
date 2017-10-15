@@ -1,27 +1,41 @@
-;;start server
+;;; package -- Summary
+
+;;; Commentary:
+
+;;; Code:
 (load "server")
 (unless (server-running-p) (server-start))
 
+;;; redefine help command:
+(global-set-key "\M-?" 'help-command)
+;;; set new backward delete command:
+(global-set-key "\C-h" 'delete-backward-char)
+
+;;; Window navigation:
+(defun other-window-backward ()
+  "Select the previous window."
+  (interactive)
+  (other-window -1)
+)
+
+(global-set-key "\C-x\C-n" 'other-window)
+(global-set-key "\C-x\C-p" 'other-window-backward)
+
+;;; Navigate between windows using Alt-1, Alt-2,
+;;; Shift-left, shift-up, shift-right:
+;;; we disable for testing the above:
+;(windmove-default-keybindings)
+
+;;; powerline:
 (require 'powerline)
-
 (setq sml/no-confirm-load-theme t)
-
 (sml/setup)
 (sml/apply-theme 'powerline)
 
-;;
-;;(powerline-default-theme)
-
-;;(require 'powerline)
-
-(if (display-graphic-p)
-    (load-theme 'heroku t))
 
 (require 'smart-mode-line)
-;;(sml/setup)
-;;(sml/apply-theme 'automatic)
 
-; highlight the current line
+;;; highlight the current line
 (require 'highlight-current-line)
 (global-hl-line-mode t)
 (setq highlight-current-line-globally t)
@@ -29,7 +43,7 @@
 (setq highlight-current-line-whole-line nil)
 (setq hl-line-face (quote highlight))
 
-; display line numbers to the right of the window
+;;; display line numbers to the left of the window
 (global-linum-mode t)
 ; show the current line and column numbers in the stats bar as well
 (line-number-mode t)
@@ -41,9 +55,6 @@
 
 ;;font size
 (set-face-attribute 'default nil :height 130)
-
-;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
- (windmove-default-keybindings)
 
  ;; Enable copy and pasting from clipboard
  (setq x-select-enable-clipboard t)
@@ -104,10 +115,22 @@
 (require 'projectile)
 (projectile-global-mode)
 
+
+;;; Set default fill mode to 100
+(defconst code-line-length 100)
+(setq-default fill-column code-line-length)
+;;; indicate the location of the fill column 
 (require 'fill-column-indicator)
 (define-globalized-minor-mode
- global-fci-mode fci-mode (lambda () (fci-mode 1)))
+  global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode t)
+;;; Mark symbols that exceed limit of 100 symbols
+(require 'whitespace)
+(setq whitespace-line-column code-line-length) ;; limit line length
+(setq whitespace-style '(face lines-tail))
+
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
 
 (if (system-is-mac)
     (load "general-mac-conf"))
@@ -129,3 +152,5 @@
 
 
 
+(provide 'general-conf)
+;;; general-conf ends here

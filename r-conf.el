@@ -1,5 +1,6 @@
 (require 'ess-site)
 
+;;(setq exec-path (cons "/usr/local/bin" exec-path))
 ;;https://github.com/jimhester/lintr
 
 auto-mode-alist (append (list '("\\.S$" . S-mode)

@@ -1,9 +1,15 @@
+;;; package -- Summary
+
+;;; Commentary:
+
+;;; Code:
 (require 'cask "~/.cask/cask.el")
 (cask-initialize "~/emacs-bartek")
 
 (add-to-list 'load-path "~/emacs-bartek/")
 
 (require 'pallet)
+(pallet-mode t)
 
 ;;
 ;;mac o linux
@@ -32,4 +38,6 @@
 (if (system-is-linux)
     (load "general-linux-conf"))
 
+(provide 'emacs-bartek)
+;;; emacs-bartek ends here
 
