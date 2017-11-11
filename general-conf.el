@@ -32,6 +32,9 @@
 (sml/setup)
 (sml/apply-theme 'powerline)
 
+;;; Theme:
+(if (display-graphic-p)
+    (load-theme 'heroku t))
 
 (require 'smart-mode-line)
 
