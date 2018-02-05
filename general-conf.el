@@ -59,8 +59,8 @@
 ;;font size
 (set-face-attribute 'default nil :height 130)
 
- ;; Enable copy and pasting from clipboard
- (setq x-select-enable-clipboard t)
+;; Enable copy and pasting from clipboard
+(setq x-select-enable-clipboard t)
 
 (setq
    backup-by-copying t      ; don't clobber symlinks
