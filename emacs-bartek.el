@@ -34,6 +34,7 @@
 (load "latex-conf")
 (load "ruby-conf")
 (load "c-conf")
+(load "scala-conf")
 
 (if (system-is-linux)
     (load "general-linux-conf"))

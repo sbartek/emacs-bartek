@@ -3,6 +3,7 @@
 ;;; Commentary:
 
 ;;; Code:
+(add-to-list 'exec-path "/usr/local/bin")
 (load "server")
 (unless (server-running-p) (server-start))
 
@@ -37,14 +38,15 @@
     (load-theme 'heroku t))
 
 (require 'smart-mode-line)
+(setq inhibit-startup-screen t)
 
 ;;; highlight the current line
-(require 'highlight-current-line)
-(global-hl-line-mode t)
-(setq highlight-current-line-globally t)
-(setq highlight-current-line-high-faces nil)
-(setq highlight-current-line-whole-line nil)
-(setq hl-line-face (quote highlight))
+;; (require 'highlight-current-line)
+;; (global-hl-line-mode t)
+;; (setq highlight-current-line-globally t)
+;; (setq highlight-current-line-high-faces nil)
+;; (setq highlight-current-line-whole-line nil)
+;; (setq hl-line-face (quote highlight))
 
 ;;; display line numbers to the left of the window
 (global-linum-mode t)
@@ -138,16 +140,13 @@
 (if (system-is-mac)
     (load "general-mac-conf"))
 
-
 ;; yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
 
-
 ;; iedit
 ; ???Fix iedit bug in Mac
 (define-key global-map (kbd "C-c ;") 'iedit-mode)
-
 
 ;;
 ;; turn on abbrev mode globally
