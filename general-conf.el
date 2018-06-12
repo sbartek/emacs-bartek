@@ -3,6 +3,7 @@
 ;;; Commentary:
 
 ;;; Code:
+
 (add-to-list 'exec-path "/usr/local/bin")
 (load "server")
 (unless (server-running-p) (server-start))

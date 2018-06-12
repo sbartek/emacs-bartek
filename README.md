@@ -36,3 +36,11 @@ sudo mv ~/.local/lib/python2.7/site-packages/cpplint.py /usr/local/bin/cpplint.p
 sudo chmod 755 /usr/local/bin/cpplint.py
 ```
 
+## jedi
+
+http://tkf.github.io/emacs-jedi/latest/
+
+```
+pip install epc
+```
+

@@ -1,9 +1,9 @@
 (source gnu)
 (source melpa)
 (source org)
-(source SC)
+;;; (source SC)
 
-
+(depends-on "ht")
 (depends-on "graphene")
 (depends-on "pallet")
 (depends-on "smart-mode-line-powerline-theme")
