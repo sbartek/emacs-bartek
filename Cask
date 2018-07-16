@@ -9,7 +9,7 @@
 (depends-on "smart-mode-line-powerline-theme")
 (depends-on "powerline")
 (depends-on "heroku-theme")
-(depends-on "highlight-current-line")
+;;(depends-on "highlight-current-line")
 (depends-on "smart-mode-line")
 (depends-on "bind-key")
 (depends-on "cask")
@@ -46,6 +46,7 @@
 (depends-on "iedit")
 
 (depends-on "markdown-mode")
+(depends-on "pandoc-mode")
 (depends-on "auctex")
 (depends-on "org")
 (depends-on "yaml-mode")
@@ -92,3 +93,6 @@
 
 ;;java
 (depends-on "gradle-mode")
+
+;;c sharp
+(depends-on "omnisharp")

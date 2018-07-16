@@ -44,3 +44,6 @@ http://tkf.github.io/emacs-jedi/latest/
 pip install epc
 ```
 
+## Markdown mode
+
+Markdown mode is configured to work with `pandoc`.
