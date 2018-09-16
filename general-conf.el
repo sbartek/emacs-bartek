@@ -28,26 +28,25 @@
 ;;; we disable for testing the above:
 ;(windmove-default-keybindings)
 
+;;; theme
+(require 'color-theme-solarized)
+(color-theme-solarized)
 ;;; powerline:
 (require 'powerline)
-(setq sml/no-confirm-load-theme t)
-(sml/setup)
-(sml/apply-theme 'powerline)
+(require 'moe-theme)
+(setq moe-theme-mode-line-color 'orange)
+(powerline-moe-theme)
+;;(require 'airline-themes)               ;
+;;(load-theme 'airline-light)
 
-;;; Theme:
-(if (display-graphic-p)
-    (load-theme 'heroku t))
-
-(require 'smart-mode-line)
 (setq inhibit-startup-screen t)
 
 ;;; highlight the current line
-;; (require 'highlight-current-line)
-;; (global-hl-line-mode t)
-;; (setq highlight-current-line-globally t)
-;; (setq highlight-current-line-high-faces nil)
-;; (setq highlight-current-line-whole-line nil)
-;; (setq hl-line-face (quote highlight))
+(global-hl-line-mode t)
+(set-face-background 'hl-line nil)
+(set-face-foreground 'hl-line nil)
+(set-face-underline  'hl-line "#a020f0")
+(set-cursor-color "#a020f0")
 
 ;;; display line numbers to the left of the window
 (global-linum-mode t)
@@ -119,7 +118,9 @@
 ;; (require 'flymake)
 
 (require 'projectile)
-(projectile-global-mode)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 
 ;;; Set default fill mode to 100
