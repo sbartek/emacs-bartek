@@ -8,7 +8,7 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize "~/emacs-bartek")
 (add-to-list 'load-path "~/emacs-bartek/")
-(require 'pallet)
+;; (require 'pallet)
 
 ;;
 ;;mac o linux

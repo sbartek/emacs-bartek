@@ -6,12 +6,7 @@
 (depends-on "ht")
 (depends-on "graphene")
 (depends-on "pallet")
-(depends-on "smart-mode-line-powerline-theme")
-(depends-on "powerline")
-(depends-on "heroku-theme")
-(depends-on "color-theme-solarized")
-(depends-on "moe-theme")
-(depends-on "airline-themes")
+
 ;;(depends-on "highlight-current-line")
 (depends-on "smart-mode-line")
 (depends-on "bind-key")
@@ -36,7 +31,7 @@
 (depends-on "use-package")
 (depends-on "yasnippet")
 
-
+;;
 (depends-on "ido") 
 (depends-on "smartparens") 
 (depends-on "auto-complete") 
@@ -47,6 +42,14 @@
 (depends-on "flymake-cursor")
 (depends-on "projectile")
 (depends-on "iedit")
+
+(depends-on "material-theme")
+(depends-on "smart-mode-line-powerline-theme")
+(depends-on "powerline")
+(depends-on "heroku-theme")
+(depends-on "color-theme-solarized")
+(depends-on "moe-theme")
+(depends-on "airline-themes")
 
 (depends-on "markdown-mode")
 (depends-on "pandoc-mode")
@@ -61,7 +64,7 @@
 (depends-on "emmet-mode")
 (depends-on "ac-emmet")
 
-
+;; python
 (depends-on "python-mode")
 (depends-on "anaconda-mode")
 (depends-on "jedi")
@@ -86,7 +89,6 @@
 
 (depends-on "auto-complete-c-headers")
 (depends-on "csv-mode")
-
 
 (depends-on "flymake-google-cpplint")
 (depends-on "google-c-style")

@@ -15,7 +15,7 @@ Add to .emacs:
 
 ## Python 
 
-I assume that one uses python's `virtualenv` and has`~\Envs` catalog
+I assume that one uses python's `virtualenv` and has`~\.virtualenvs` catalog
 with `py3.6` environment. If not, one should edit `python-config.el`
 file accordingly.`
 

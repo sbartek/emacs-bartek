@@ -6,7 +6,7 @@
 ; virtualenv
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells) ;; if you want interactive shell support
-(setq venv-location "~/Envs")
+(setq venv-location "~/.virtualenvs")
 (venv-workon "py3.6")
 
 ;;; jedi

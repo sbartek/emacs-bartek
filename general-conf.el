@@ -29,15 +29,13 @@
 ;(windmove-default-keybindings)
 
 ;;; theme
-(require 'color-theme-solarized)
-(color-theme-solarized)
+
+;;(color-theme-solarized)
+(load-theme 'material t)
+
 ;;; powerline:
 (require 'powerline)
-(require 'moe-theme)
-(setq moe-theme-mode-line-color 'orange)
-(powerline-moe-theme)
-;;(require 'airline-themes)               ;
-;;(load-theme 'airline-light)
+(powerline-default-theme)
 
 (setq inhibit-startup-screen t)
 
