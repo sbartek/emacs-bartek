@@ -35,7 +35,8 @@
 
 ;;; powerline:
 (require 'powerline)
-(powerline-default-theme)
+;;(powerline-default-theme)
+(powerline-center-theme)
 
 (setq inhibit-startup-screen t)
 
