@@ -16,4 +16,5 @@
 
 
 ;; anaconda-mode (noting to do with Anaconda)
-(add-hook 'python-mode-hook 'anaconda-mode)
+;;(add-hook 'python-mode-hook 'anaconda-mode)
+(elpy-enable)

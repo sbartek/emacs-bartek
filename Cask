@@ -67,10 +67,12 @@
 ;; python
 (depends-on "python-mode")
 (depends-on "anaconda-mode")
+(depends-on "elpy")
 (depends-on "jedi")
 (depends-on "virtualenvwrapper")
 (depends-on "ein")
 
+;;ruby
 (depends-on "enh-ruby-mode")
 (depends-on "rvm")
 (depends-on "rinari")
