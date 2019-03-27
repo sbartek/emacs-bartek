@@ -3,13 +3,12 @@
 ;;; Commentary:
 
 ;;; Code:
+;;; Initialization of package system
+
 (require 'cask "~/.cask/cask.el")
 (cask-initialize "~/emacs-bartek")
-
 (add-to-list 'load-path "~/emacs-bartek/")
-
-(require 'pallet)
-(pallet-mode t)
+;; (require 'pallet)
 
 ;;
 ;;mac o linux
@@ -34,6 +33,8 @@
 (load "latex-conf")
 (load "ruby-conf")
 (load "c-conf")
+(load "scala-conf")
+(load "csharp-conf")
 
 (if (system-is-linux)
     (load "general-linux-conf"))

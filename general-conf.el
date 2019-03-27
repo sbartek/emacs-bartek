@@ -3,6 +3,8 @@
 ;;; Commentary:
 
 ;;; Code:
+
+(add-to-list 'exec-path "/usr/local/bin")
 (load "server")
 (unless (server-running-p) (server-start))
 
@@ -26,25 +28,24 @@
 ;;; we disable for testing the above:
 ;(windmove-default-keybindings)
 
+;;; theme
+
+;;(color-theme-solarized)
+(load-theme 'material t)
+
 ;;; powerline:
 (require 'powerline)
-(setq sml/no-confirm-load-theme t)
-(sml/setup)
-(sml/apply-theme 'powerline)
+;;(powerline-default-theme)
+(powerline-center-theme)
 
-;;; Theme:
-(if (display-graphic-p)
-    (load-theme 'heroku t))
-
-(require 'smart-mode-line)
+(setq inhibit-startup-screen t)
 
 ;;; highlight the current line
-(require 'highlight-current-line)
 (global-hl-line-mode t)
-(setq highlight-current-line-globally t)
-(setq highlight-current-line-high-faces nil)
-(setq highlight-current-line-whole-line nil)
-(setq hl-line-face (quote highlight))
+(set-face-background 'hl-line nil)
+(set-face-foreground 'hl-line nil)
+(set-face-underline  'hl-line "#a020f0")
+(set-cursor-color "#a020f0")
 
 ;;; display line numbers to the left of the window
 (global-linum-mode t)
@@ -116,7 +117,9 @@
 ;; (require 'flymake)
 
 (require 'projectile)
-(projectile-global-mode)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 
 ;;; Set default fill mode to 100
@@ -138,16 +141,13 @@
 (if (system-is-mac)
     (load "general-mac-conf"))
 
-
 ;; yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
 
-
 ;; iedit
 ; ???Fix iedit bug in Mac
 (define-key global-map (kbd "C-c ;") 'iedit-mode)
-
 
 ;;
 ;; turn on abbrev mode globally

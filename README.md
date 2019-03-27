@@ -15,7 +15,7 @@ Add to .emacs:
 
 ## Python 
 
-I assume that one uses python's `virtualenv` and has`~\Envs` catalog
+I assume that one uses python's `virtualenv` and has`~\.virtualenvs` catalog
 with `py3.6` environment. If not, one should edit `python-config.el`
 file accordingly.`
 
@@ -36,3 +36,14 @@ sudo mv ~/.local/lib/python2.7/site-packages/cpplint.py /usr/local/bin/cpplint.p
 sudo chmod 755 /usr/local/bin/cpplint.py
 ```
 
+## jedi
+
+http://tkf.github.io/emacs-jedi/latest/
+
+```
+pip install epc
+```
+
+## Markdown mode
+
+Markdown mode is configured to work with `pandoc`.

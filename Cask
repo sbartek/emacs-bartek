@@ -1,15 +1,13 @@
 (source gnu)
 (source melpa)
 (source org)
-(source SC)
+;;; (source SC)
 
-
+(depends-on "ht")
 (depends-on "graphene")
 (depends-on "pallet")
-(depends-on "smart-mode-line-powerline-theme")
-(depends-on "powerline")
-(depends-on "heroku-theme")
-(depends-on "highlight-current-line")
+
+;;(depends-on "highlight-current-line")
 (depends-on "smart-mode-line")
 (depends-on "bind-key")
 (depends-on "cask")
@@ -33,7 +31,7 @@
 (depends-on "use-package")
 (depends-on "yasnippet")
 
-
+;;
 (depends-on "ido") 
 (depends-on "smartparens") 
 (depends-on "auto-complete") 
@@ -45,7 +43,16 @@
 (depends-on "projectile")
 (depends-on "iedit")
 
+(depends-on "material-theme")
+(depends-on "smart-mode-line-powerline-theme")
+(depends-on "powerline")
+(depends-on "heroku-theme")
+(depends-on "color-theme-solarized")
+(depends-on "moe-theme")
+(depends-on "airline-themes")
+
 (depends-on "markdown-mode")
+(depends-on "pandoc-mode")
 (depends-on "auctex")
 (depends-on "org")
 (depends-on "yaml-mode")
@@ -57,13 +64,15 @@
 (depends-on "emmet-mode")
 (depends-on "ac-emmet")
 
-
+;; python
 (depends-on "python-mode")
 (depends-on "anaconda-mode")
+(depends-on "elpy")
 (depends-on "jedi")
 (depends-on "virtualenvwrapper")
 (depends-on "ein")
 
+;;ruby
 (depends-on "enh-ruby-mode")
 (depends-on "rvm")
 (depends-on "rinari")
@@ -80,10 +89,8 @@
 
 (depends-on "ensime")
 
-
 (depends-on "auto-complete-c-headers")
 (depends-on "csv-mode")
-
 
 (depends-on "flymake-google-cpplint")
 (depends-on "google-c-style")
@@ -93,3 +100,6 @@
 
 ;;java
 (depends-on "gradle-mode")
+
+;;c sharp
+(depends-on "omnisharp")
