@@ -19,10 +19,18 @@ I assume that one uses python's `virtualenv` and has`~\.virtualenvs` catalog
 with `py3.6` environment. If not, one should edit `python-config.el`
 file accordingly.`
 
-Also, after installing everything run in Emacs: `M-x jedi:install-server`
 
-You can also install Pylint for Python by, for example, 
-`pip install pylint``
+You can also install Pylint for Python by and other usefull packages by
+
+```
+pip install pylint autopep8 jedi epc yapf black
+```
+
+### jedi
+
+http://tkf.github.io/emacs-jedi/latest/
+
+Also, after installing everything run in Emacs: `M-x jedi:install-server`
 
 
 ## C/C++ Support
@@ -36,13 +44,6 @@ sudo mv ~/.local/lib/python2.7/site-packages/cpplint.py /usr/local/bin/cpplint.p
 sudo chmod 755 /usr/local/bin/cpplint.py
 ```
 
-## jedi
-
-http://tkf.github.io/emacs-jedi/latest/
-
-```
-pip install epc
-```
 
 ## Markdown mode
 
