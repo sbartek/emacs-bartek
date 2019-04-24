@@ -23,7 +23,7 @@ file accordingly.`
 You can also install Pylint for Python by and other usefull packages by
 
 ```
-pip install pylint autopep8 jedi epc yapf black
+pip install pylint autopep8 jedi epc yapf black flake8
 ```
 
 ### jedi

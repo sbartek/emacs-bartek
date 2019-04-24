@@ -157,3 +157,5 @@
 
 (provide 'general-conf)
 ;;; general-conf ends here
+
+(require 'dockerfile-mode)

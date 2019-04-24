@@ -103,3 +103,5 @@
 
 ;;c sharp
 (depends-on "omnisharp")
+
+(depends-on "dockerfile-mode")
