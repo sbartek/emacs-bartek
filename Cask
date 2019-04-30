@@ -30,6 +30,7 @@
 (depends-on "smex")
 (depends-on "use-package")
 (depends-on "yasnippet")
+(depends-on "neotree")
 
 ;;
 (depends-on "ido") 
