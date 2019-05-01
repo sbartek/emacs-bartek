@@ -174,6 +174,16 @@
                 (neotree-find file-name)))
         (message "Could not find git project root."))))
 
+;; (defcustom neo-hidden-regexp-list
+;;   '("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "__pycache__")
+;;   "*The regexp list matching hidden files."
+;;   :type  '(repeat (choice regexp))
+;;   :group 'neotree)
+(eval-after-load "neotree"
+    '(setq neo-hidden-regexp-list '("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "__pycache__"))
+    )
+(setq neo-show-hidden-files nil)
+
 (provide 'general-conf)
 ;;; general-conf ends here
 
