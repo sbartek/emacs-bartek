@@ -23,8 +23,10 @@ file accordingly.`
 You can also install Pylint for Python by and other usefull packages by
 
 ```
-pip install pylint autopep8 jedi epc yapf black flake8
+pip install pylint autopep8 jedi epc yapf black flake8 rope ropemacs
 ```
+
+It is also recommended to have `ipython` and `jupyter` installed.
 
 ### jedi
 
@@ -32,6 +34,26 @@ http://tkf.github.io/emacs-jedi/latest/
 
 Also, after installing everything run in Emacs: `M-x jedi:install-server`
 
+
+### Elpy 
+
+#### Navigation
+
+`M-.` Go to the location where the identifier at point is defined. 
+
+`C-x 4 .` The same, but other window.
+
+`M-,` Go back
+
+#### Shell
+
+`C-c C-z` Run shell
+
+#### Editing
+
+`C-c C-e` Edit all occurrences of the symbol at point at once. 
+
+`C-c C-r r` refactor
 
 ## C/C++ Support
 
