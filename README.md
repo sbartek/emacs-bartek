@@ -45,6 +45,8 @@ Also, after installing everything run in Emacs: `M-x jedi:install-server`
 
 `M-,` Go back
 
+`C-c C-d` docs
+
 #### Shell
 
 `C-c C-z` Run shell
@@ -70,3 +72,7 @@ sudo chmod 755 /usr/local/bin/cpplint.py
 ## Markdown mode
 
 Markdown mode is configured to work with `pandoc`.
+
+## Extras
+
+`f8` Tree plugin
