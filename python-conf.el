@@ -23,3 +23,6 @@
       python-shell-prompt-detect-failure-warning nil)
 (add-to-list 'python-shell-completion-native-disabled-interpreters
              "jupyter")
+
+(provide 'python-conf)
+;;; python-conf.el ends here

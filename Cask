@@ -72,6 +72,7 @@
 (depends-on "jedi")
 (depends-on "virtualenvwrapper")
 (depends-on "ein")
+(depends-on "company-tabnine")
 
 ;;ruby
 (depends-on "enh-ruby-mode")
