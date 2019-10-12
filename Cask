@@ -107,3 +107,6 @@
 (depends-on "omnisharp")
 
 (depends-on "dockerfile-mode")
+
+;;rust
+(depends-on "rust-mode")
