@@ -8,6 +8,9 @@
 (load "server")
 (unless (server-running-p) (server-start))
 
+;;; Dired
+(setq dired-dwim-target t)
+
 ;;; redefine help command:
 (global-set-key "\M-?" 'help-command)
 ;;; set new backward delete command:

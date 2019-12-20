@@ -110,3 +110,6 @@
 
 ;;rust
 (depends-on "rust-mode")
+
+;;go
+(depends-on "go-mode")

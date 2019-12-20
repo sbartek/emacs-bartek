@@ -7,7 +7,8 @@
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells) ;; if you want interactive shell support
 (setq venv-location "~/.virtualenvs")
-(venv-workon "py3.6")
+(setq projectile-switch-project-action 'venv-projectile-auto-workon)
+;;; (venv-workon "py3.6")
 
 ;;; jedi
 ;;; http://tkf.github.io/emacs-jedi/latest/
