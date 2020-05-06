@@ -1,6 +1,16 @@
 My emacs config
 ===============
 
+## Install emacs
+
+On mac you can install install emacs with
+
+``` shell
+brew cask install emacs
+```
+
+## Install cask
+
 Install cask
 http://cask.readthedocs.org/en/latest/guide/installation.html#manual-installation
 
@@ -13,20 +23,21 @@ Add to .emacs:
     (load "~/emacs-bartek/emacs-bartek.el")
 
 
-## Python 
+## Aspell on mac
 
-I assume that one uses python's `virtualenv` and has`~\.virtualenvs` catalog
-with `py3.6` environment. If not, one should edit `python-config.el`
-file accordingly.`
+``` shell
+brew install aspell
+```
+
+## Python 
 
 
 You can also install Pylint for Python by and other usefull packages by
 
 ```
-pip install pylint autopep8 jedi epc yapf black flake8 rope ropemacs
+pip install pylint autopep8 jedi epc yapf black flake8 rope ropemacs ipython jupyter
 ```
 
-It is also recommended to have `ipython` and `jupyter` installed.
 
 ### jedi
 

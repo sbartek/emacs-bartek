@@ -70,9 +70,11 @@
 (depends-on "anaconda-mode")
 (depends-on "elpy")
 (depends-on "jedi")
-(depends-on "virtualenvwrapper")
+;;(depends-on "virtualenvwrapper")
 (depends-on "ein")
 (depends-on "company-tabnine")
+(depends-on "pipenv")
+(depends-on "pyvenv")
 
 ;;ruby
 (depends-on "enh-ruby-mode")

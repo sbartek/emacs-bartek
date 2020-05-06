@@ -4,6 +4,8 @@
 
 ;;; Code:
 
+
+(setq ad-redefinition-action 'accept)
 (add-to-list 'exec-path "/usr/local/bin")
 (load "server")
 (unless (server-running-p) (server-start))
@@ -113,8 +115,11 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
-(add-hook 'after-init-hook #'global-flycheck-mode)
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
 
+(add-hook 'after-init-hook 'global-flycheck-mode)
 
 ;; ;;http://www.emacswiki.org/emacs/FlymakeRuby
 ;; (require 'flymake)
@@ -146,7 +151,7 @@
 
 ;; yasnippet
 (require 'yasnippet)
-(yas-global-mode 1)
+(yas-global-mode 1)                     
 
 ;; iedit
 ; ???Fix iedit bug in Mac
@@ -177,11 +182,6 @@
                 (neotree-find file-name)))
         (message "Could not find git project root."))))
 
-;; (defcustom neo-hidden-regexp-list
-;;   '("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "__pycache__")
-;;   "*The regexp list matching hidden files."
-;;   :type  '(repeat (choice regexp))
-;;   :group 'neotree)
 (eval-after-load "neotree"
     '(setq neo-hidden-regexp-list '("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "__pycache__"))
     )
