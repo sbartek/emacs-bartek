@@ -131,7 +131,7 @@
 
 
 ;;; Set default fill mode to 100
-(defconst code-line-length 100)
+(defconst code-line-length 127)
 (setq-default fill-column code-line-length)
 ;;; indicate the location of the fill column 
 (require 'fill-column-indicator)

@@ -4,7 +4,7 @@
 ;;; (source SC)
 
 (depends-on "ht")
-(depends-on "graphene")
+;;(depends-on "graphene")
 (depends-on "pallet")
 
 ;;(depends-on "highlight-current-line")
@@ -115,3 +115,6 @@
 
 ;;go
 (depends-on "go-mode")
+
+;;dart
+(depends-on "dart-mode")

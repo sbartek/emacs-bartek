@@ -39,6 +39,7 @@
 (if (system-is-linux)
     (load "general-linux-conf"))
 
+
 ;; (provide 'emacs-bartek)
 ;; ;;; emacs-bartek ends here
 
