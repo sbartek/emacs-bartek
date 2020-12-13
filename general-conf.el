@@ -10,6 +10,12 @@
 (load "server")
 (unless (server-running-p) (server-start))
 
+;;full screen
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
+(setq inhibit-startup-screen t)
+
 ;;; Dired
 (setq dired-dwim-target t)
 
@@ -43,8 +49,6 @@
 ;;(powerline-default-theme)
 (powerline-center-theme)
 
-(setq inhibit-startup-screen t)
-
 ;;; highlight the current line
 (global-hl-line-mode t)
 (set-face-background 'hl-line nil)
@@ -57,10 +61,6 @@
 ; show the current line and column numbers in the stats bar as well
 (line-number-mode t)
 (column-number-mode t)
-
-;;full screen
-(custom-set-variables
- '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
 ;;font size
 (set-face-attribute 'default nil :height 130)

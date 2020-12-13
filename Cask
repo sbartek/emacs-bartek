@@ -1,13 +1,24 @@
 (source gnu)
 (source melpa)
 (source org)
-;;; (source SC)
+
+(depends-on "cask-mode") 
+
+
+(depends-on "ido") 
+(depends-on "smartparens") 
+(depends-on "auto-complete") 
+(depends-on "fill-column-indicator") 
+(depends-on "highlight-indentation") 
+(depends-on "flyspell") 
+(depends-on "flymake")
+(depends-on "flymake-cursor")
+(depends-on "projectile")
+(depends-on "iedit")
 
 (depends-on "ht")
-;;(depends-on "graphene")
 (depends-on "pallet")
 
-;;(depends-on "highlight-current-line")
 (depends-on "smart-mode-line")
 (depends-on "bind-key")
 (depends-on "cask")
@@ -32,23 +43,10 @@
 (depends-on "yasnippet")
 (depends-on "neotree")
 
-;;
-(depends-on "ido") 
-(depends-on "smartparens") 
-(depends-on "auto-complete") 
-(depends-on "fill-column-indicator") 
-(depends-on "highlight-indentation") 
-(depends-on "flyspell") 
-(depends-on "flymake")
-(depends-on "flymake-cursor")
-(depends-on "projectile")
-(depends-on "iedit")
-
 (depends-on "material-theme")
 (depends-on "smart-mode-line-powerline-theme")
 (depends-on "powerline")
 (depends-on "heroku-theme")
-(depends-on "color-theme-solarized")
 (depends-on "moe-theme")
 (depends-on "airline-themes")
 
@@ -91,8 +89,6 @@
 (depends-on "ess-smart-equals")
 (depends-on "polymode")
 
-(depends-on "ensime")
-
 (depends-on "auto-complete-c-headers")
 (depends-on "csv-mode")
 
@@ -118,3 +114,8 @@
 
 ;;dart
 (depends-on "dart-mode")
+
+;;scala
+(depends-on "scala-mode")
+(depends-on "sbt-mode")
+(depends-on "lsp-mode")
