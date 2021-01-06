@@ -21,6 +21,23 @@
 
 ;; Enable defer and ensure by default for use-package
 ;; Keep auto-save/backup files separate from source code:  https://github.com/scalameta/metals/issues/1027
+
+(require 'package)
+
+;; Add melpa to your packages repositories
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
+(package-initialize)
+
+;; Install use-package if not already installed
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(require 'use-package)
+
+;; Enable defer and ensure by default for use-package
+;; Keep auto-save/backup files separate from source code:  https://github.com/scalameta/metals/issues/1027
 (setq use-package-always-defer t
       use-package-always-ensure t
       backup-directory-alist `((".*" . ,temporary-file-directory))
@@ -79,5 +96,3 @@
   (lsp-mode . dap-mode)
   (lsp-mode . dap-ui-mode)
   )
-
-;;; scala-conf.el ends here
