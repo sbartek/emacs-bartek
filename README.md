@@ -1,4 +1,4 @@
-My emacs config
+My emacs configuration
 ===============
 
 ## Install emacs
@@ -47,6 +47,11 @@ Also, after installing everything run in Emacs: `M-x jedi:install-server`
 
 
 ### Elpy 
+
+#### Virtualenv
+
+Choose virtualenv with:
+`M-x workon`
 
 #### Navigation
 

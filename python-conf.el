@@ -20,6 +20,8 @@
 ;;; Elpy
 (elpy-enable)
 
+(defalias 'workon 'pyvenv-workon)
+
 (setq python-shell-interpreter "jupyter"
       python-shell-interpreter-args "console --simple-prompt"
       python-shell-prompt-detect-failure-warning nil)
@@ -29,19 +31,19 @@
 (provide 'python-conf)
 
 
-(add-hook 'python-mode-hook #'pipenv-mode)
+;; (add-hook 'python-mode-hook #'pipenv-mode)
 
-(pyvenv-tracking-mode)
-(defun pipenv-auto-activate ()
-;; Set `pyvenv-activate' to the current pipenv virtualenv.
-;; This function is intended to be used in parallel with
-;; `pyvenv-tracking-mode'."
-  (pipenv-deactivate)
-  (pipenv--force-wait (pipenv-venv))
-  (when python-shell-virtualenv-root
-    (setq-local pyvenv-activate
-                (directory-file-name python-shell-virtualenv-root))
-    (setq python-shell-virtualenv-root nil)))
-(add-hook 'elpy-mode-hook 'pipenv-auto-activate)
+;; (pyvenv-tracking-mode)
+;; (defun pipenv-auto-activate ()
+;; ;; Set `pyvenv-activate' to the current pipenv virtualenv.
+;; ;; This function is intended to be used in parallel with
+;; ;; `pyvenv-tracking-mode'."
+;;   (pipenv-deactivate)
+;;   (pipenv--force-wait (pipenv-venv))
+;;   (when python-shell-virtualenv-root
+;;     (setq-local pyvenv-activate
+;;                 (directory-file-name python-shell-virtualenv-root))
+;;     (setq python-shell-virtualenv-root nil)))
+;; (add-hook 'elpy-mode-hook 'pipenv-auto-activate)
 
-;;; python-conf.el ends here
+;; ;;; python-conf.el ends here
