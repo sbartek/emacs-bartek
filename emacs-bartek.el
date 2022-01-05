@@ -33,7 +33,7 @@
 (load "latex-conf")
 (load "ruby-conf")
 (load "c-conf")
-(load "scala-conf")
+;;(load "scala-conf")
 (load "csharp-conf")
 
 (if (system-is-linux)

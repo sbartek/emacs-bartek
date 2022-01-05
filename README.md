@@ -6,7 +6,7 @@ My emacs configuration
 On mac you can install install emacs with
 
 ``` shell
-brew cask install emacs
+brew install --cask emacs
 ```
 
 ## Install cask
