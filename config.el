@@ -5,7 +5,7 @@
       user-mail-address "bartekskorulski@gmail.com")
 
 ;;; UI
-(setq doom-theme 'doom-tomorrow-night) ; true black background
+(setq doom-theme 'doom-ir-black)    ; true #000000 background
 (setq doom-font (font-spec :family "MesloLGS Nerd Font" :size 13))
 (setq display-line-numbers-type t)
 
