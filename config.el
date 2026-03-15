@@ -6,7 +6,7 @@
 
 ;;; UI
 (setq doom-theme 'doom-material)   ; closest to old material-theme
-(setq doom-font (font-spec :family "MesloLGS NF" :size 13))
+(setq doom-font (font-spec :family "MesloLGS Nerd Font" :size 13))
 (setq display-line-numbers-type t)
 
 ;;; Editor defaults (from old config)
